@@ -20,7 +20,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/it2008018/bootstrapAkuity
+        repoURL: https://github.com/it2008018/appsetAkuitypoc
         targetRevision: HEAD
         path: 'clusters2/{{name}}/apps'
         directory:
