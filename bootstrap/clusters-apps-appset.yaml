@@ -16,7 +16,7 @@ spec:
           values: ['true']
   template:
     metadata:
-      name: 'tara-apps-zuscu-d006-b207-aks-d1-atldp'
+      name: 'repo1-apps-zuscu-d006-b207-aks-d1-atldp'
     spec:
       project: default
       source:
