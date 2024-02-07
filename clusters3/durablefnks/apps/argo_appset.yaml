@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: clus3taraapps
+  name: taramanual
 spec:
   destination:
     name: durablefnks
-    namespace: clus3taraapps
+    namespace: taramanual
   source:
     path: guestbook
     repoURL: 'https://github.com/it2008018/guestbook-Tara.git/'
