@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppSet
+metadata:
+  name: cluster-apps
+spec:
+  generators:
+  - list:
+      elements:
+      - name: frontend
+        source:
+          repoURL: https://github.com/it2008018/appsetAkuitypoc
+          targetRevision: HEAD
+          path: 'clusters3/durablefnks/apps'
+  template:
+    metadata:
+      labels:
+        app: 'durablefnks'
+    spec:
+      project: default
+      source:
+        repoURL: 'https://github.com/it2008018/appsetAkuitypoc'
+        targetRevision: 'HEAD'
+        path: 'clusters3/durablefnks/apps'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'argocd'
