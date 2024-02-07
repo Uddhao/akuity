@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: appsetuat
+  name: taraappsetuat
 spec:
   destination:
-    name: zuscu-d006-b207-aks-d1-atldp
-    namespace: appsetuat
+    name: durablefnks
+    namespace: taraappsetuat
   source:
     path: guestbook
-    repoURL: 'https://github.com/argoproj/argocd-example-apps/'
+    repoURL: 'https://github.com/it2008018/guestbook-Tara.git/'
     targetRevision: HEAD
   project: default
   syncPolicy:
