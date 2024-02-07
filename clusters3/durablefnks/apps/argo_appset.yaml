@@ -1,26 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
-kind: AppSet
+kind: Application
 metadata:
-  name: cluster-apps
+  name: clus3taraapps
 spec:
-  generators:
-  - list:
-      elements:
-      - name: frontend
-        source:
-          repoURL: https://github.com/it2008018/appsetAkuitypoc
-          targetRevision: HEAD
-          path: 'clusters3/durablefnks/apps'
-  template:
-    metadata:
-      labels:
-        app: 'durablefnks'
-    spec:
-      project: default
-      source:
-        repoURL: 'https://github.com/it2008018/appsetAkuitypoc'
-        targetRevision: 'HEAD'
-        path: 'clusters3/durablefnks/apps'
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: 'argocd'
+  destination:
+    name: durablefnks
+    namespace: clus3taraapps
+  source:
+    path: guestbook
+    repoURL: 'https://github.com/it2008018/guestbook-Tara.git/'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
