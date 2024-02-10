@@ -22,7 +22,7 @@ spec:
       source:
         repoURL: https://github.com/it2008018/appsetAkuitypoc
         targetRevision: HEAD
-        path: 'clusters3/durablefnks/apps'
+        path: 'clusters2/zuscu-d006-b207-aks-d1-atldp/apps'
         directory:
           recurse: true
       destination:
