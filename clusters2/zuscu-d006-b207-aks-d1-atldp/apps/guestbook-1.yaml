@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tara1
+  name: uddhao
 spec:
   destination:
     name: zuscu-d006-b207-aks-d1-atldp
-    namespace: tara1
+    namespace: uddhao
   source:
     path: guestbook
-    repoURL: 'https://github.com/it2008018/guestbook-Tara.git/'
+    repoURL: 'https://github.com/Uddhao/akuity.git/'
     targetRevision: HEAD
   project: default
   syncPolicy:
